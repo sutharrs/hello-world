@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<template name="Employee Details" id="website.employee" page="True">
+			<t t-call="website.layout">
+				<div id="page">
+					<h3>Employee Details</h3>
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Email</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<t t-foreach="employees" t-as="employee">
+									<tr>
+										<td><t t-esc="employee.name_related" /></td>
+										<td><t t-esc="employee.work_email" /></td>
+									</tr>
+								</t>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</t>
+		</template>
+	</data>
+</openerp>
